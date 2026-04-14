@@ -16,19 +16,19 @@ services:
       - 'traefik.http.middlewares.btps-ratelimit.ratelimit.burst=60'
       - 'traefik.http.middlewares.btps-ratelimit.ratelimit.period=1m'
       - 'traefik.http.services.btps.loadbalancer.server.port=3000'
-    # healthcheck:
-    #   test:
-    #     [
-    #       'CMD',
-    #       'wget',
-    #       '--no-verbose',
-    #       '--tries=1',
-    #       '--spider',
-    #       'http://127.0.0.1:3000/',
-    #     ]
-    #   interval: 30s
-    #   timeout: 10s
-    #   retries: 3
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'wget',
+          '--no-verbose',
+          '--tries=1',
+          '--spider',
+          'http://127.0.0.1:3000/',
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
 networks:
   traefik-public:
