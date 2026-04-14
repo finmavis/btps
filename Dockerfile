@@ -6,7 +6,9 @@ RUN npm ci
 FROM node:20-alpine AS production-dependencies-env
 COPY ./package.json package-lock.json /app/
 WORKDIR /app
-RUN HUSKY=0 npm ci --omit=dev
+# With --omit=dev, `husky` is not installed but `prepare` still runs `husky` → 127.
+# `HUSKY=0` only helps when the husky binary exists. Skip scripts for prod-only deps.
+RUN npm ci --omit=dev --ignore-scripts
 
 FROM node:20-alpine AS build-env
 COPY . /app/
