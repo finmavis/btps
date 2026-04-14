@@ -1,0 +1,368 @@
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.fieldLabel {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.errorText {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--destructive);
+}
+
+.dropZone {
+  display: flex;
+  min-height: 7rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  background: var(--muted);
+  padding: 1rem;
+  text-align: center;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.dropZoneDragging {
+  border-color: var(--primary);
+  background: var(--accent);
+}
+
+.dropHint {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+}
+
+.fileName {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  word-break: break-all;
+}
+
+.tableWrap {
+  max-height: min(50vh, 420px);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.step2ReviewTable {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.step2VirtualThead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.step2VirtualTbody {
+  display: block;
+  position: relative;
+}
+
+.step2VirtualRow {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.step2ReviewTable .step2VirtualThead th:nth-child(1),
+.step2ReviewTable .step2VirtualRow td:nth-child(1) {
+  width: 3.25rem;
+}
+.step2ReviewTable .step2VirtualThead th:nth-child(2),
+.step2ReviewTable .step2VirtualRow td:nth-child(2) {
+  width: 10.5rem;
+}
+.step2ReviewTable .step2VirtualThead th:nth-child(3),
+.step2ReviewTable .step2VirtualRow td:nth-child(3) {
+  width: 12.5rem;
+}
+.step2ReviewTable .step2VirtualThead th:nth-child(4),
+.step2ReviewTable .step2VirtualRow td:nth-child(4) {
+  width: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.step2ReviewTable .step2VirtualThead th:nth-child(5),
+.step2ReviewTable .step2VirtualRow td:nth-child(5) {
+  width: 7.5rem;
+}
+.step2ReviewTable .step2VirtualThead th:nth-child(6),
+.step2ReviewTable .step2VirtualRow td:nth-child(6) {
+  width: 8.5rem;
+}
+
+.step2Grid {
+  width: 100%;
+  min-width: 36rem;
+  font-size: 0.875rem;
+}
+
+.step2GridCols {
+  display: grid;
+  grid-template-columns:
+    3.25rem
+    minmax(9rem, 11rem)
+    minmax(10rem, 13rem)
+    minmax(0, 1fr)
+    8.5rem
+    7.5rem;
+  align-items: center;
+  min-width: 0;
+}
+
+.step2GridHeader {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--border);
+  background: var(--muted);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.step2HeadCell {
+  height: 2.75rem;
+  padding: 0 1rem;
+  text-align: left;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.step2HeadCellRight {
+  text-align: right;
+}
+
+.step2GridBody {
+  position: relative;
+  min-width: 0;
+}
+
+.step2GridDataRow {
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+  transition: background 0.1s ease;
+}
+
+.step2GridDataRow:hover {
+  background: color-mix(in srgb, var(--muted) 75%, transparent);
+}
+
+.step2BodyCell {
+  padding: 0.875rem 1rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--foreground);
+}
+
+.step2BodyCellRight {
+  text-align: right;
+}
+
+.step2BodyCellMuted {
+  color: var(--muted-foreground);
+}
+
+.validCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.validOk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #166534;
+  font-weight: 500;
+}
+
+.validBad {
+  color: #991b1b;
+}
+
+.errList {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.75rem;
+  color: var(--destructive);
+}
+
+.summaryGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.summaryBlock {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--muted);
+  padding: 1rem 1.25rem;
+}
+
+.summaryLabel {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted-foreground);
+}
+
+.summaryValue {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.statsRow {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+}
+
+.statCard {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 0.875rem 1rem;
+}
+
+.statLabel {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.statValue {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--foreground);
+}
+
+.sectionTitle {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.formatExample {
+  margin-top: 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--muted);
+  padding: 0.5rem 0.75rem;
+}
+
+.formatExample summary {
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.formatExample pre {
+  margin: 0.5rem 0 0;
+  overflow-x: auto;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--foreground);
+}
+
+.step1ActionsRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.step2Hint {
+  margin-bottom: 0.75rem;
+}
+
+.step2ActionsRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.step2ValidationTrigger {
+  padding: 0;
+  height: auto;
+}
+
+.validationPopoverBody {
+  max-width: 320px;
+}
+
+.validationPopoverTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.errListCompact {
+  margin: 0;
+}
+
+.summaryTitleFull {
+  grid-column: 1 / -1;
+}
+
+.summaryStatsFull {
+  grid-column: 1 / -1;
+}
+
+.summaryErrorFull {
+  grid-column: 1 / -1;
+}
+
+.summaryActionsRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  grid-column: 1 / -1;
+}
+
+.summarySubmitRow {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}

@@ -1,0 +1,11 @@
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--foreground);
+}
+
+.label[data-disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,62 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stepCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 2px solid var(--border);
+  color: var(--muted-foreground);
+  background: var(--card);
+}
+
+.stepCircleActive {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.stepCircleDone {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--accent);
+}
+
+.stepLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.stepLabelActive {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.stepLine {
+  width: 2rem;
+  height: 2px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.stepLineDone {
+  background: var(--primary);
+}

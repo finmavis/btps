@@ -1,0 +1,82 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  border: 1px solid transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.root:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.root:focus-visible {
+  outline: var(--focus-ring-width) solid var(--ring);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.variantDefault {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.variantDefault:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.variantOutline {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.variantOutline:hover:not(:disabled) {
+  background: var(--muted);
+}
+
+.variantGhost {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.variantGhost:hover:not(:disabled) {
+  background: var(--muted);
+}
+
+.sizeDefault {
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+
+.sizeSm {
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.sizeLg {
+  height: 2.75rem;
+  padding: 0 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.sizeIcon {
+  height: 2.25rem;
+  width: 2.25rem;
+  padding: 0;
+}

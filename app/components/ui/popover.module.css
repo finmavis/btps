@@ -1,0 +1,10 @@
+.content {
+  z-index: 50;
+  width: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+  outline: none;
+}

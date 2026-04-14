@@ -1,0 +1,94 @@
+.trigger {
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--input);
+  background: var(--card);
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.trigger:hover:not(:disabled) {
+  border-color: var(--muted-foreground);
+}
+
+.trigger:focus-visible {
+  outline: none;
+  border-color: var(--foreground);
+  box-shadow: var(--focus-ring);
+}
+
+.trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.triggerInline {
+  width: auto;
+  min-width: 4.5rem;
+}
+
+.icon {
+  display: flex;
+  height: 1rem;
+  width: 1rem;
+  opacity: 0.5;
+}
+
+.content {
+  z-index: 50;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow-md);
+  padding: 0.25rem;
+}
+
+.viewport {
+  padding: 0.125rem;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  cursor: default;
+  user-select: none;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
+  outline: none;
+  color: var(--foreground);
+}
+
+.item[data-highlighted] {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.item[data-disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.itemWithIndicator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.separator {
+  margin: 0.25rem -0.25rem;
+  height: 1px;
+  background: var(--border);
+}

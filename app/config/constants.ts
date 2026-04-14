@@ -1,0 +1,3 @@
+export const DEFAULT_BRAND_NAME = 'BTPS';
+
+export const BATCH_LIST_SEARCH_DEBOUNCE_MS = 500;

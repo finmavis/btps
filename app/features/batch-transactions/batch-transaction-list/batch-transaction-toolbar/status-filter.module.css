@@ -1,0 +1,53 @@
+.trigger {
+  width: auto;
+  /* min-width: 10rem; */
+  /* justify-content: flex-start; */
+}
+
+.triggerInner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.popover {
+  min-width: 12rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  text-align: left;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: var(--accent);
+}
+
+.optionSelected {
+  background: var(--accent);
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}

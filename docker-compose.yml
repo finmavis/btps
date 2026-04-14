@@ -1,0 +1,35 @@
+services:
+  btps:
+    build: .
+    container_name: btps-app
+    restart: unless-stopped
+    networks:
+      - traefik-public
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.btps.rule=Host(`btps.finmavis.dev`)'
+      - 'traefik.http.routers.btps.entrypoints=websecure'
+      - 'traefik.http.routers.btps.tls=true'
+      - 'traefik.http.routers.btps.tls.certresolver=cloudflare'
+      - 'traefik.http.routers.btps.middlewares=btps-ratelimit'
+      - 'traefik.http.middlewares.btps-ratelimit.ratelimit.average=90'
+      - 'traefik.http.middlewares.btps-ratelimit.ratelimit.burst=60'
+      - 'traefik.http.middlewares.btps-ratelimit.ratelimit.period=1m'
+      - 'traefik.http.services.btps.loadbalancer.server.port=3000'
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'wget',
+          '--no-verbose',
+          '--tries=1',
+          '--spider',
+          'http://127.0.0.1:3000/',
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  traefik-public:
+    external: true

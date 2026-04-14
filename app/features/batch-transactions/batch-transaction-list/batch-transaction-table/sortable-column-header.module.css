@@ -1,0 +1,26 @@
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.trigger {
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.trigger:hover {
+  color: var(--foreground);
+}
+
+.icon {
+  display: inline-flex;
+  margin-left: 0.25rem;
+  color: var(--muted-foreground);
+}
+
+.muted {
+  opacity: 0.45;
+}

@@ -1,0 +1,53 @@
+.popover {
+  min-width: 18rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.labelRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.dateInput {
+  display: flex;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--input);
+  padding: 0 0.5rem;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  color: var(--foreground);
+  background: var(--card);
+}
+
+.dateInput:focus-visible {
+  outline: none;
+  border-color: var(--foreground);
+  box-shadow: var(--focus-ring);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.triggerInner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}

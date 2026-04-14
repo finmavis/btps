@@ -1,0 +1,22 @@
+.triggerWrap {
+  display: inline-flex;
+}
+
+.badgeHelp {
+  cursor: help;
+}
+
+.popoverBody {
+  max-width: 360px;
+  font-size: 0.8125rem;
+}
+
+.popoverTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.errorsList {
+  margin: 0;
+  padding-left: 1rem;
+}
